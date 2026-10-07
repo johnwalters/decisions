@@ -25,3 +25,7 @@ The app uses fixed choices `healthy`, `rotten`, and `unclear`. Instructions can 
 ## Verification
 
 Run `npx tsc --noEmit` and `node /Users/johnwalters/.codex/plugins/cache/openai-curated-remote/sites/1.0.0-d/scripts/build-site.mjs`. Live API verification requires an API key and is pending until one is configured.
+
+## Healthy routing thresholds
+
+Enable **Use thresholds** in the Healthy thresholds panel. An API Healthy result stays Healthy only when its healthy probability is at least the selected minimum and its rotten probability is at most the selected maximum (inclusive boundaries). Otherwise it routes to Unclear for review. Other API categories and refusals are unchanged. Defaults are 70% / 25%, with the rule initially disabled. Settings persist in this browser and apply instantly to all saved decisions without another API call. Groups, disagreement filtering, and label agreement use the routed result; the original API choice and response remain visible and unchanged. JSON exports include the current threshold settings and both original and routed categories. Reset experiment clears images and results but preserves threshold preferences.
