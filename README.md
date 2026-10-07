@@ -4,7 +4,7 @@ An image classification experiment using OpenAI's `POST /v1/decisions` endpoint 
 
 ## Run locally
 
-1. Install dependencies: `node scripts/install-ci.mjs`.
+1. Install dependencies: `npm run install:ci`. The installer must run through npm so it can locate npm's executable.
 2. Create `.env` containing `OPENAI_API_KEY=your-key` (ignored by Git). Never put this key in browser code.
 3. Run `npm run dev` and open the printed local URL. Restart after configuring the key.
 
